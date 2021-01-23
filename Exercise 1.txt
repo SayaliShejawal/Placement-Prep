@@ -1,0 +1,924 @@
+1. WAP to Check Prime Number using loop?
+=>
+#include <iostream>
+using namespace std;
+int main() {
+	int n,i,flag=0;
+	cout<<"Enter the No. : ";
+	cin>>n;
+	for(i=2;i<=n;i++){
+		if(n%i==0)
+		{
+			flag=1;
+			break;
+		
+		}
+	}
+	if(n==1)
+	{
+		cout<<"1 is neither prime nor composite.";
+	}
+	else
+	{
+		if(flag==0)
+		{
+			cout<<n<<" is not Prime";
+		}
+		else
+		{
+			cout<<n<<" is Prime";
+		}
+	}
+
+	return 0;
+}
+
+==============================================
+2. WAP to Check if a Number is Positive or Negative
+=>
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n,i,flag=0;
+	cout<<"Enter the No. : ";
+	cin>>n;
+	
+	
+	if(n==0)
+	{
+		cout<<"0 is neither Positive nor Negative.";
+	}
+	else
+	{
+		if(n>0)
+		{
+			cout<<n<<" is Positive";
+		}
+		else
+		{
+			cout<<n<<" is Negative";
+		}
+	}
+
+	return 0;
+}
+=============================================
+3. WAP to Find Factorial of a number.
+=>
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n,i,fact=1;
+	cout<<"Enter the No. : ";
+	cin>>n;
+	
+	for(i=1;i<=n;i++)
+	{
+		fact=fact * i;
+	}
+	cout<<"Factorial of "<<n<<" is "<<fact;
+	return 0;
+}
+
+==============================================
+4. WAP to Display Fibonacci series
+=>
+#include <iostream>;
+using namespace std;
+
+int main() {
+	int n,i,fn=0,ln=1,sum=0;
+	
+	cout<<"Enter the No. : ";
+	cin>>n;
+	
+	for(i=1;i<=n;++i)
+	{
+		if(i==1)
+		{
+			cout<<fn<<" , ";
+			continue;
+		}
+		if(i==2)
+		{
+			cout<<ln<<" , ";
+			continue;
+		}
+		sum=fn+ln;
+		fn=ln;
+		ln=sum;
+		
+		cout<<ln<<" , ";
+	}
+	return 0;
+}
+
+=====================================
+5. WAP to Display Fibonacci series up to a given
+number (instead of terms)
+Input: 20
+Output:0 + 1 + 1 + 2 + 3 + 5 + 8 + 13
+=>
+#include <iostream>;
+using namespace std;
+
+int main() {
+	int n,i,fn=0,ln=1,sum=0;
+	
+	cout<<"Enter the No. : ";
+	cin>>n;
+	
+	cout<<"Fibo series: "<<fn<<" + "<<ln;
+	
+	sum=fn+ln;
+	
+	while(sum<=n)
+	{
+		cout<<" + "<<sum;
+		fn=ln;
+		ln=sum;
+		sum=fn+ln;
+	}
+	return 0;
+}
+
+====================================
+6. WAP to Display Uppercased A to Z
+=>
+#include <iostream>;
+using namespace std;
+
+int main() {
+	
+	char a;
+	
+	cout<<"Uppercase Alphabets: "<<endl;
+	
+	for(a=65;a<=90;a++)
+	{
+		cout<<a<<" ";
+	}
+	return 0;
+}
+
+=====================================
+7. WAP to Swap two numbers using temporary variable
+=>
+#include <iostream>;
+using namespace std;
+
+int main() {
+	
+	int a,b,temp;
+	cout<<"Enter the value of a: ";
+	cin>>a;
+	cout<<"Enter the value of b: ";
+	cin>>b;
+	
+	cout<<"After swapping values of a and b are: "<<endl;
+	temp=a;
+	a=b;
+	b=temp;
+	
+	cout<<"a = "<<a<<endl;
+	cout<<"b = "<<b<<endl;
+	
+	return 0;
+}
+========================================
+8.WAP to Swap two numbers without using temporary
+variable
+=>
+#include <iostream>;
+using namespace std;
+
+int main() {
+	
+	int a,b;
+	cout<<"Enter the value of a: ";
+	cin>>a;
+	cout<<"Enter the value of b: ";
+	cin>>b;
+	
+	cout<<"After swapping values of a and b are: "<<endl;
+	a=a+b;
+	b=a-b;
+	a=a-b;
+	
+	cout<<"a = "<<a<<endl;
+	cout<<"b = "<<b<<endl;
+	
+	return 0;
+}
+==========================================
+9. WAP to Check whether an alphabet is vowel or
+consonant
+=>#include <iostream>;
+using namespace std;
+
+int main() {
+	
+	char ch;
+	cout<<"Enter the Alphabet: "<<endl;
+	cin>>ch;
+	if((ch>=65 && ch<=90) || (ch>=97 && ch<=122))
+	{
+	
+	switch(ch)
+	{
+		case 'a':
+		case 'e':
+		case 'i':
+		case 'o':
+		case 'u':
+		case 'A':
+		case 'E':
+		case 'I':
+		case 'O':
+		case 'U':
+			cout<<ch<<" is Vowel."<<endl;
+			break;
+		default:
+			cout<<ch<<" is consonent."<<endl;
+			break;
+	}
+	}
+	else
+	{
+		cout<<"Enter the alphabet only."<<endl;
+	}
+	return 0;
+}
+
+==================================================
+10. WAP to Find the largest number among the given
+numbers
+=>
+#include <iostream>;
+using namespace std;
+
+int main() {
+	
+	int n,i,j,largest;
+	cout<<"Enter the No of elements: "<<endl;
+	cin>>n;
+	
+	cout<<"element 1: ";
+	cin>>largest;
+	
+	for(i=2;i<=n;i++)
+	{
+		cout<<"Element "<<i<<" : ";
+		cin>>j;
+		
+		if(largest < j)
+		{
+			largest = j;
+		}
+	}
+	cout<<"Largest of "<<n<<" numbers is: "<<largest<<endl;
+	return 0;
+}
+=================================================
+12. WAP to Program to Check Palindrome
+=>
+#include <iostream>;
+using namespace std;
+
+int main() {
+	
+	int n,num,rem,rev=0;
+	
+	cout<<"Enter the No: ";
+	cin>>n;
+	num=n;
+	
+	while(n>0)
+	{
+		rem = n % 10;
+		rev = rev * 10 + rem;
+		n = n / 10;
+	}
+	if(num == rev)
+	{
+		cout<<"Number is Palindrome."<<endl;
+	}
+	else
+	{
+		cout<<"Number is NOT Palindrome."<<endl;
+	}
+	return 0;
+}
+==================================
+13. WAP to Program to Check Prime Number
+=>
+#include <iostream>;
+using namespace std;
+
+int main() {
+	
+	int n,i,flag=0;
+	
+	cout<<"Enter the No: ";
+	cin>>n;
+	
+	if(n==1)
+	{
+		cout<<"1 is neither prime or composite.";
+	}
+	else if(n%2==0)
+	{
+		cout<<n<<" is PRIME NOT NUMBER.";
+	}
+	else
+	{
+		cout<<n<<" is PRIME NUMBER.";
+	}
+
+	return 0;
+}
+=======================================
+14. WAP to Display Prime Numbers Between two
+Intervals
+=>
+#include <iostream>;
+using namespace std;
+
+int main() {
+	
+	int i,low,high,flag=0;
+	
+	cout<<"Enter the Two Intervals: ";
+	cin>>low;
+	cin>>high;
+	
+	cout<<"The prime numbers between "<<low<<" and "<<high<<" is: "<<endl;
+	while(low<high)
+	{
+		flag=0;
+		if(low<=1)
+		{
+			++low;
+			continue;
+		}
+		for(i=2;i<=low/2;++i)
+		{
+			if(low%i==0)
+			{
+				flag=1;
+				break;
+			}
+		}
+		if(flag==0)
+		cout<<low<<" ";
+		++low;
+	}
+	
+	
+	return 0;
+}
+=======================================================
+15. WAP to Check Armstrong Number for 3 digit
+number
+=>
+#include <iostream>;
+using namespace std;
+
+int main() {
+	
+	int n,temp,rem,sum=0;
+	
+	cout<<"Enter the Three digit No: ";
+	cin>>n;
+	
+	if(n>99)
+	{
+	
+	temp=n;
+	while(n!=0)
+	{
+		rem=n%10;
+		sum=sum+(rem*rem*rem);
+		n=n/10;
+	}
+	if(sum==temp)
+	{
+		cout<<temp<<" is AN AMSTRONG NUMBER.";
+	}
+	else
+	{
+		cout<<temp<<" is NOT AN AMSTRONG NUMBER.";
+	}
+}
+else
+{
+	cout<<"Enter three digit number.";
+}
+
+	
+	return 0;
+}
+=========================================
+16. WAP to Check Armstrong Number for n digit
+number
+=>
+
+
+
+
+
+==================================
+17. WAP to Armstrong Numbers Between Two
+Integers
+=>
+
+#include <iostream>;
+using namespace std;
+
+int main() {
+	
+	int n,n1,n2,i,sum,rem;
+	
+	cout<<"Enter the 1st No: ";
+	cin>>n1;
+	
+	cout<<"Enter the 2nd No: ";
+	cin>>n2;
+	
+	cout<<"Amstrong Numbers between "<<n1<<" and "<<n2<<" are: ";
+	
+	for(i=n1;i<=n2;i++)
+	{
+		sum=0;
+		n=i;
+		
+		for(;n>0;n /= 10)
+		{
+			rem=n%10;
+			sum=sum+(rem*rem*rem);
+		}
+		if(sum==1)
+		{
+			cout<<i<<endl;	
+		}
+	}
+	return 0;
+}
+
+==========================================
+19. WAP to Represent a number as Sum of Two Prime
+Numbers
+=>
+#include <iostream>;
+using namespace std;
+int sum_of_primes(int n)
+{
+	int i, isPrime=1;
+	for(i=2;i<=n/2;i++)
+	{
+		if(n%i == 0)
+		{
+			isPrime=0;
+			break;
+		}
+	}
+	return isPrime;
+	
+}
+int main() {
+	
+	int n,i,flag=0;
+	
+	cout<<"Enter the No: ";
+	cin>>n;
+	
+	for(i=2;i<=n/2;i++)
+	{
+		if(sum_of_primes(i)==1)
+		{
+			if(sum_of_primes(n-i)==1)
+			{
+				cout<<n<<" = "<<i<<" + "<<n-i<<endl;
+				flag=1;
+			}
+		}
+	}
+	if(flag == 0)
+	{
+		cout<<"Cannot represent Sum of Prime Numbers.";
+	}
+		
+	return 0;
+}
+============================================
+20. WAP to Convert Decimal to Octal
+=>
+
+#include <iostream>
+using namespace std;
+ 
+void decToOctal(int n)
+{
+     
+  
+    int octalNum[10];
+ 
+    int i = 0;
+    while (n != 0) {
+ 
+        octalNum[i] = n % 8;
+        cout<<"rem "<<octalNum[i]<<endl;
+        n = n / 8;
+        cout<<"num "<<n<<endl;
+        i++;
+    }
+ 
+    for (int j = i - 1; j >= 0; j--)
+        cout << octalNum[j];
+}
+
+int main()
+{
+    int n = 33;
+     
+ 
+    decToOctal(n);
+ 
+    return 0;
+}
+
+=========================================
+21. WAP to Convert Octal to Decimal
+=>
+#include <iostream>
+using namespace std;
+int octalToDecimal(int n) 
+{ 
+    int num = n; 
+    int dec_value = 0; 
+  
+    // Initializing base value to 1, i.e 8^0 
+    int base = 1; 
+  
+    int temp = num; 
+    while (temp) { 
+  
+        // Extracting last digit 
+        int last_digit = temp % 10; 
+        temp = temp / 10; 
+  
+        // Multiplying last digit with appropriate 
+        // base value and adding it to dec_value 
+        dec_value += last_digit * base; 
+  
+        base = base * 8; 
+    } 
+  
+    return dec_value; 
+} 
+  
+// Driver program to test above function 
+int main() 
+{ 
+    int num = 67; 
+  
+    cout << octalToDecimal(num) << endl; 
+} 
+
+=========================================
+22. WAP to convert binary number to decimal
+=>
+#include<iostream>
+#include<math.h>
+using namespace std;
+int convert(long long n);
+int main() {
+    long long n;
+   cout<<"Enter a binary number: ";
+    cin>>n;
+    cout<<convert(n);
+    return 0;
+}
+
+int convert(long long n) {
+    int dec = 0, i = 0, rem;
+    while (n != 0) {
+        rem = n % 10;
+        n /= 10;
+        dec += rem * pow(2, i);
+        ++i;
+    }
+    return dec;
+}
+
+====================================
+23. WAP to convert decimal number to binary
+=>
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+long long convert(int n);
+int main() {
+    int n;
+    cout<<"Enter a decimal number: ";
+    cin>>n;
+    cout<<convert(n);
+    return 0;
+}
+
+long long convert(int n) {
+    long long bin = 0;
+    int rem, i = 1, step = 1;
+    while (n != 0) {
+        rem = n % 2;
+       // printf("Step %d: %d/2, Remainder = %d, Quotient = %d\n", step++, n, rem, n / 2);
+        n /= 2;
+        bin += rem * i;
+        i *= 10;
+    }
+    return bin;
+}
+
+===========================================
+24. WAP to Factorial of a Number Using Recursion
+=>
+#include<iostream>
+using namespace std;
+long int multiplyNumbers(int n) {
+    if (n>=1)
+        return n*multiplyNumbers(n-1);
+    else
+        return 1;
+}
+
+int main() {
+    int n;
+    cout<<"Enter a positive integer: ";
+    cin>>n;
+    cout<<"Factorial of "<< n <<" :"<<multiplyNumbers(n);
+    return 0;
+}
+
+
+
+=========================================
+25. WAP to Convert Decimal to Octal
+=>
+#include <iostream>
+using namespace std;
+ 
+void decToOctal(int n)
+{
+     
+  
+    int octalNum[10];
+ 
+    int i = 0;
+    while (n != 0) {
+ 
+        octalNum[i] = n % 8;
+        cout<<"rem "<<octalNum[i]<<endl;
+        n = n / 8;
+        cout<<"num "<<n<<endl;
+        i++;
+    }
+ 
+    for (int j = i - 1; j >= 0; j--)
+        cout << octalNum[j];
+}
+
+int main()
+{
+    int n = 33;
+     
+ 
+    decToOctal(n);
+ 
+    return 0;
+}
+
+=========================================
+26. WAP to Convert Binary to Octal
+=>
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int convertBinarytoOctal(long long);
+int main()
+{
+    long long binaryNumber;
+
+    cout << "Enter a binary number: ";
+    cin >> binaryNumber;
+
+    cout << binaryNumber << " in binary = " << convertBinarytoOctal(binaryNumber) << " in octal ";
+
+    return 0;
+}
+
+int convertBinarytoOctal(long long binaryNumber)
+{
+    int octalNumber = 0, decimalNumber = 0, i = 0;
+
+    while(binaryNumber != 0)
+    {
+        decimalNumber += (binaryNumber%10) * pow(2,i);
+        ++i;
+        binaryNumber/=10;
+    }
+
+    i = 1;
+
+    while (decimalNumber != 0)
+    {
+        octalNumber += (decimalNumber % 8) * i;
+        decimalNumber /= 8;
+        i *= 10;
+    }
+
+    return octalNumber;
+}
+
+===========================================
+27. WAP to Convert Octal to Binary
+=>
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+long long convertOctalToBinary(int);
+int main()
+{
+    int octalNumber;
+
+    cout << "Enter an octal number: ";
+    cin >> octalNumber;
+
+    cout << octalNumber << " in octal = " << convertOctalToBinary(octalNumber) << "in binary";
+
+    return 0;
+}
+
+long long convertOctalToBinary(int octalNumber)
+{
+    int decimalNumber = 0, i = 0;
+    long long binaryNumber = 0;
+
+    while(octalNumber != 0)
+    {
+        decimalNumber += (octalNumber%10) * pow(8,i);
+        ++i;
+        octalNumber/=10;
+    }
+
+    i = 1;
+
+    while (decimalNumber != 0)
+    {
+        binaryNumber += (decimalNumber % 2) * i;
+        decimalNumber /= 2;
+        i *= 10;
+    }
+
+    return binaryNumber;
+}
+
+========================================
+28. WAP to Reverse a Sentence Using Recursion
+Input : CDAC Mumbai
+Output: iabmum CADC
+=>
+#include <iostream>
+using namespace std;
+
+void reverse(const string& str) {
+
+  
+  size_t numOfChars = str.size();
+
+  if(numOfChars == 1) {
+    cout << str << endl;
+  }
+  else {
+    cout << str[numOfChars - 1];
+
+ 
+    reverse(str.substr(0, numOfChars - 1));
+  }
+}
+
+
+int main() {
+  string str;
+
+  cout << " Please enter a string " << endl;
+  getline(cin, str);
+    
+ 
+  reverse(str);
+
+  return 0;    
+}
+
+
+
+
+===========================================
+29. WAP to calculate power using recursion
+=>
+#include <iostream>
+using namespace std;
+
+int calculatePower(int base, int powerRaised)
+{
+    if (powerRaised != 0)
+        return (base*calculatePower(base, powerRaised-1));
+    else
+        return 1;
+}
+
+int main()
+{
+    int base, powerRaised, result;
+
+    cout << "Enter base number: ";
+    cin >> base;
+
+    cout << "Enter power number(positive integer): ";
+    cin >> powerRaised;
+
+    result = calculatePower(base, powerRaised);
+    cout << base << "^" << powerRaised << " = " << result;
+
+    return 0;
+}
+
+===========================================
+30. WAP to Find the largest element in an array
+Input: 89, 34 50, 23, 100, 39,455
+Output: 455
+=>
+#include <iostream>
+using namespace std;
+
+int main(){
+	int a[] = {89, 34 ,50, 23, 100, 39,455};
+	int l = sizeof(a)/sizeof(a[0]);
+//	cout<<l;
+	int max = a[0];
+	for(int i=1;i<l;i++){
+		if(max<a[i])
+		max = a[i];
+	}
+	
+	cout<<max;
+}
+
+
+======================END=====================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
